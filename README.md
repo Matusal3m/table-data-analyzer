@@ -1,32 +1,32 @@
-# Projeto de Análise de Tabelas e Verificação de Lucro
+# Projeto de Análise de Tabelas
 
-Este projeto realiza a análise de tabelas com o objetivo de identificar inconsistências em dados de lucro com base em arquivos CSV ou HTML. O sistema organiza dados em uma estrutura tabular e verifica valores suspeitos de lucro unitário, indicando possíveis erros ou valores fora do padrão.
+Este projeto é um **analisador de dados tabulares** flexível, projetado para processar e estruturar dados a partir de arquivos CSV ou HTML e transformá-los em uma estrutura de tabela uniforme. Através de sua arquitetura modular, o sistema permite a implementação de diferentes tipos de análises sobre os dados processados. A análise de lucros é uma funcionalidade atual do projeto, mas ele está preparado para receber outras análises de dados no futuro, tornando-se uma ferramenta robusta e extensível para diferentes cenários de verificação de informações.
 
 ## Estrutura do Projeto
 
-O projeto é organizado em módulos que manipulam, processam e analisam os dados de entrada, suportando arquivos CSV e HTML:
+O projeto organiza-se em módulos que facilitam o processamento de dados, a manipulação de tabelas e a análise. Seus principais componentes incluem:
 
-- `DOMParser`: Converte strings HTML em documentos DOM.
-- `ProfitAnalyser`: Realiza a análise de lucro e identifica valores suspeitos.
-- `CSVTableParser` e `HTMLTableParser`: Fazem o parsing dos arquivos CSV e HTML.
-- `Table`, `Row`, `Collumn`, `Cell`, e `Header`: Estruturas que abstraem a tabela, linhas, colunas, células e cabeçalhos.
-- `ParserFactory`: Fábrica para criar o parser correto baseado no tipo de arquivo.
-- `ProfitAnalysisService`: Organiza o fluxo da análise de lucros usando `ProfitAnalyser`.
+- `DOMParser`: converte strings HTML em documentos DOM para permitir a extração de dados de tabelas HTML.
+- `Table`, `Row`, `Collumn`, `Cell`, e `Header`: abstraem a estrutura da tabela, organizando dados em linhas, colunas, células e cabeçalhos.
+- `CSVTableParser` e `HTMLTableParser`: interpretam arquivos CSV e HTML, respectivamente, transformando-os em tabelas.
+- `ParserFactory`: uma fábrica de parsers, que cria o parser apropriado conforme o tipo de arquivo fornecido.
+- `ProfitAnalyser`: exemplo de funcionalidade de análise que verifica a consistência de valores de lucro dentro da tabela, destacando dados suspeitos.
 
 ## Funcionalidades
 
-1. **Parsing de Arquivos CSV e HTML**:
+1. **Parsing de Arquivos para Estruturação em Tabelas**:
 
-   - `CSVTableParser`: Lê arquivos CSV, processa cabeçalhos e linhas.
-   - `HTMLTableParser`: Lê e processa tabelas HTML.
+   - `CSVTableParser`: lê arquivos CSV e cria uma estrutura de tabela organizada em colunas e linhas.
+   - `HTMLTableParser`: processa tabelas HTML e converte dados em uma tabela interna.
 
-2. **Análise de Lucros**:
+2. **Análise de Dados Personalizada**:
 
-   - `ProfitAnalyser`: Verifica se os lucros por unidade estão em um intervalo aceitável.
-   - `ProfitAnalysisService`: Executa a análise de lucro e organiza os dados verificados.
+   - `ProfitAnalyser` (funcionalidade atual): analisa colunas específicas para verificar a consistência dos dados de lucro.
+   - **Extensibilidade para outras análises**: o projeto é projetado para suportar outros tipos de análises sobre dados tabulares, permitindo a adição de novos módulos de análise conforme as necessidades.
 
-3. **Identificação de Dados Suspeitos**:
-   - Identifica e exibe células onde o lucro está fora do padrão, comparando com preços de venda.
+3. **Identificação e Filtragem de Dados**:
+   - Extração de colunas e linhas válidas.
+   - Filtragem e validação de dados para análises específicas.
 
 ## Instalação
 
@@ -38,6 +38,8 @@ O projeto é organizado em módulos que manipulam, processam e analisam os dados
   git clone <link-do-repositorio>
   cd <diretorio-do-projeto>
   ```
+
+````
 
 ### Instalação de Dependências
 
@@ -51,13 +53,13 @@ npm install
 
 ### Exemplo de Execução
 
-Para executar a análise, utilize:
+Para realizar a análise sobre uma tabela gerada a partir de um arquivo CSV ou HTML, utilize:
 
 ```bash
 node index.mjs
 ```
 
-O arquivo `index.mjs` lê os dados de `produtos.csv` e realiza a análise de lucros, retornando uma lista de valores suspeitos.
+O arquivo `index.mjs` executa a análise de lucros sobre dados de `produtos.csv` e retorna uma lista de valores suspeitos. Para outras análises, basta adicionar novos módulos e configurá-los conforme o padrão da aplicação.
 
 ### Exemplo de Estrutura dos Dados de Entrada
 
@@ -111,7 +113,7 @@ DOMParser.parse(html);
 
 ```javascript
 /**
- * Construtor para analisar os lucros.
+ * Construtor para análise de dados.
  * @param {Collumn} sellPriceCollumn - Coluna de valores de venda.
  * @param {Collumn} buyPriceCollumn - Coluna de valores de compra.
  * @param {Collumn} profitCollumn - Coluna de lucros.
@@ -223,7 +225,9 @@ src/
 ## Melhorias Futuras
 
 1. **Implementação de novos parsers**: Suporte a JSON e XML.
-2. **Validações de dados**: Identificar e lidar com dados inválidos.
-3. **Melhorias de performance**: Processar arquivos grandes com streams.
-4. **Relatórios**: Exportar resultados de análise para CSV ou PDF.
-5. **Outras formas de análises**
+2. **Novos tipos de análise**: Implementar outras análises para verificar dados em diversas colunas ou linhas.
+3. **Validações de dados**: Identificar e lidar com dados inválidos.
+4. **Melhorias de performance**: Processar arquivos grandes com streams.
+5. **Relatórios**: Exportar resultados de análise para CSV ou PDF.
+6. **Mais análises**: Adicionar outras funcionalidades de análise.
+````

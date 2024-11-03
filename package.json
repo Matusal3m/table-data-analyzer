@@ -1,0 +1,16 @@
+{
+  "name": "calc-products",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.mjs",
+    "parse": "node ./parse.mjs --dir=./src/ --extensions=.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jsdom": "^25.0.1"
+  }
+}

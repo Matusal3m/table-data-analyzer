@@ -1,45 +1,3 @@
-# Projeto de Análise de Tabelas
-
-Este projeto é um **analisador de dados tabulares** flexível, projetado para processar e estruturar dados a partir de arquivos CSV ou HTML e transformá-los em uma estrutura de tabela uniforme. Através de sua arquitetura modular, o sistema permite a implementação de diferentes tipos de análises sobre os dados processados. A análise de lucros é uma funcionalidade atual do projeto, mas ele está preparado para receber outras análises de dados no futuro, tornando-se uma ferramenta robusta e extensível para diferentes cenários de verificação de informações.
-
-## Estrutura do Projeto
-
-O projeto organiza-se em módulos que facilitam o processamento de dados, a manipulação de tabelas e a análise. Seus principais componentes incluem:
-
-- `DOMParser`: converte strings HTML em documentos DOM para permitir a extração de dados de tabelas HTML.
-- `Table`, `Row`, `Collumn`, `Cell`, e `Header`: abstraem a estrutura da tabela, organizando dados em linhas, colunas, células e cabeçalhos.
-- `CSVTableParser` e `HTMLTableParser`: interpretam arquivos CSV e HTML, respectivamente, transformando-os em tabelas.
-- `ParserFactory`: uma fábrica de parsers, que cria o parser apropriado conforme o tipo de arquivo fornecido.
-- `ProfitAnalyser`: exemplo de funcionalidade de análise que verifica a consistência de valores de lucro dentro da tabela, destacando dados suspeitos.
-
-## Funcionalidades
-
-1. **Parsing de Arquivos para Estruturação em Tabelas**:
-
-   - `CSVTableParser`: lê arquivos CSV e cria uma estrutura de tabela organizada em colunas e linhas.
-   - `HTMLTableParser`: processa tabelas HTML e converte dados em uma tabela interna.
-
-2. **Análise de Dados Personalizada**:
-
-   - `ProfitAnalyser` (funcionalidade atual): analisa colunas específicas para verificar a consistência dos dados de lucro.
-   - **Extensibilidade para outras análises**: o projeto é projetado para suportar outros tipos de análises sobre dados tabulares, permitindo a adição de novos módulos de análise conforme as necessidades.
-
-3. **Identificação e Filtragem de Dados**:
-   - Extração de colunas e linhas válidas.
-   - Filtragem e validação de dados para análises específicas.
-
-## Instalação
-
-### Pré-requisitos
-
-- **Node.js** v12+ e npm.
-- Clone este repositório:
-  ```bash
-  git clone <link-do-repositorio>
-  cd <diretorio-do-projeto>
-  ```
-
-````
 
 ### Instalação de Dependências
 
@@ -230,4 +188,3 @@ src/
 4. **Melhorias de performance**: Processar arquivos grandes com streams.
 5. **Relatórios**: Exportar resultados de análise para CSV ou PDF.
 6. **Mais análises**: Adicionar outras funcionalidades de análise.
-````

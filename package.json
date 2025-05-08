@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.mjs",
-    "parse": "node ./parse.mjs --dir=./src/ --extensions=.mjs"
+    "start": "node ./src/index.js",
+    "parse": "node ./parse.js --dir=./src/ --extensions=.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",

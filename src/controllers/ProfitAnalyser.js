@@ -1,4 +1,4 @@
-import Collumn from "../table/Collumn.mjs";
+import Collumn from "../table/Collumn.js";
 
 export default class ProfitAnalyser {
   /**

@@ -1,6 +1,6 @@
-import Row from "./Row.mjs";
-import Collumn from "./Collumn.mjs";
-import Header from "./Headers.mjs";
+import Row from "./Row.js";
+import Collumn from "./Collumn.js";
+import Header from "./Headers.js";
 
 /**
  * @interface
@@ -44,12 +44,14 @@ export default class Table {
 
   findCollumnByName(name) {
     return this.extractValidCollumns().find((collumn) =>
-      collumn.name.includes(name)
+      collumn.name.includes(name),
     );
   }
 
   collumnFromIndex(collumnIndex) {
-    return this.extractValidCollumns().find(collumn => collumn.index === collumnIndex);
+    return this.extractValidCollumns().find(
+      (collumn) => collumn.index === collumnIndex,
+    );
   }
 
   rowFromIndex(rowIndex) {

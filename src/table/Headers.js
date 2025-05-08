@@ -1,5 +1,5 @@
-import Cell from "./Cell.mjs";
-import Row from "./Row.mjs";
+import Cell from "./Cell.js";
+import Row from "./Row.js";
 
 export default class Header extends Row {
   /**

@@ -1,4 +1,4 @@
-import Cell from "./Cell.mjs";
+import Cell from "./Cell.js";
 
 export default class Row {
   /**
@@ -7,7 +7,7 @@ export default class Row {
    */
   constructor(cells, rowIndex) {
     this.cells = cells;
-    this.index = rowIndex
+    this.index = rowIndex;
   }
 
   /**

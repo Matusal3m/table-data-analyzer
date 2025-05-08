@@ -1,4 +1,4 @@
-import Cell from "./Cell.mjs";
+import Cell from "./Cell.js";
 
 export default class Collumn {
   /**

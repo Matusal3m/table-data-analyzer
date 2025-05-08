@@ -1,6 +1,6 @@
-import Header from "../table/Headers.mjs";
+import Header from "../table/Headers.js";
 import fs from "fs/promises";
-import Parser from "./Parser.mjs";
+import Parser from "./Parser.js";
 
 export default class CSVTableParser extends Parser {
   async parse(csvPath) {

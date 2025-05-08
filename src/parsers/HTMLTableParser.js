@@ -1,7 +1,7 @@
 import fs from "fs/promises";
-import DOMParser from "../adapters/DOMParser.mjs";
-import Header from "../table/Headers.mjs";
-import Parser from "./Parser.mjs";
+import DOMParser from "../adapters/DOMParser.js";
+import Header from "../table/Headers.js";
+import Parser from "./Parser.js";
 
 export default class HTMLTableParser extends Parser {
   async parse(htmlPath) {

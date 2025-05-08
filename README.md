@@ -14,10 +14,10 @@ npm install
 Para realizar a análise sobre uma tabela gerada a partir de um arquivo CSV ou HTML, utilize:
 
 ```bash
-node index.mjs
+node index.js
 ```
 
-O arquivo `index.mjs` executa a análise de lucros sobre dados de `produtos.csv` e retorna uma lista de valores suspeitos. Para outras análises, basta adicionar novos módulos e configurá-los conforme o padrão da aplicação.
+O arquivo `index.js` executa a análise de lucros sobre dados de `produtos.csv` e retorna uma lista de valores suspeitos. Para outras análises, basta adicionar novos módulos e configurá-los conforme o padrão da aplicação.
 
 ### Exemplo de Estrutura dos Dados de Entrada
 
@@ -158,26 +158,26 @@ ProfitAnalysisService.getSuspectProfits();
 ```
 src/
 ├── controllers/
-│   └── ProfitAnalyser.mjs
-│   └── ProfitAnalysisService.mjs
+│   └── ProfitAnalyser.js
+│   └── ProfitAnalysisService.js
 ├── data/
 │   └── input/
 │       └── produtos.csv
 │   └── output/
 │       └── produtos-teste.json
-├── index.mjs
+├── index.js
 ├── parsers/
-│   └── CSVTableParser.mjs
-│   └── HTMLTableParser.mjs
-│   └── ParserFactory.mjs
+│   └── CSVTableParser.js
+│   └── HTMLTableParser.js
+│   └── ParserFactory.js
 ├── adapters/
-│   └── DOMParser.mjs
+│   └── DOMParser.js
 ├── table/
-│   └── Cell.mjs
-│   └── Collumn.mjs
-│   └── Row.mjs
-│   └── Headers.mjs
-│   └── Table.mjs
+│   └── Cell.js
+│   └── Collumn.js
+│   └── Row.js
+│   └── Headers.js
+│   └── Table.js
 ```
 
 ## Melhorias Futuras

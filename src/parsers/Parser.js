@@ -1,11 +1,11 @@
-import Cell from "../table/Cell.mjs";
-import Collumn from "../table/Collumn.mjs";
-import Row from "../table/Row.mjs";
+import Cell from "../table/Cell.js";
+import Collumn from "../table/Collumn.js";
+import Row from "../table/Row.js";
 
 export default class Parser {
   /**
-   * @param {string[]} headers 
-   * @param {string[][]} tableRowsData 
+   * @param {string[]} headers
+   * @param {string[][]} tableRowsData
    */
   getCollumns(headers, tableRowsData) {
     const collumns = [];
@@ -25,9 +25,9 @@ export default class Parser {
   }
 
   /**
-   * 
-   * @param {string[]} headers 
-   * @param {string[][]} tableRowsData 
+   *
+   * @param {string[]} headers
+   * @param {string[][]} tableRowsData
    */
   getRows(headers, tableRowsData) {
     const rows = [];
@@ -47,9 +47,9 @@ export default class Parser {
   }
 
   /**
-   * 
-   * @param {string[]} headers 
-   * @param {string[][]} tableRowsData 
+   *
+   * @param {string[]} headers
+   * @param {string[][]} tableRowsData
    */
   getCollumnsAndRows(headers, tableRowsData) {
     return {

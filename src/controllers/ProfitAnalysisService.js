@@ -1,4 +1,4 @@
-import ProfitAnalyser from "./ProfitAnalyser.mjs";
+import ProfitAnalyser from "./ProfitAnalyser.js";
 
 export default class ProfitAnalysisService {
   constructor(table) {
@@ -9,7 +9,7 @@ export default class ProfitAnalysisService {
     const analyser = new ProfitAnalyser(
       this.table.findCollumnByName("VALOR DE VENDA"),
       this.table.findCollumnByName("VALOR DE COMPRA"),
-      this.table.findCollumnByName("LUCRO POR UNIDADE")
+      this.table.findCollumnByName("LUCRO POR UNIDADE"),
     );
     return analyser.analyseIfProfitMakesSense();
   }

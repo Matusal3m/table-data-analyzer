@@ -1,11 +1,11 @@
-import CSVTableParser from "./CSVTableParser.mjs";
-import HTMLTableParser from "./HTMLTableParser.mjs";
+import CSVTableParser from "./CSVTableParser.js";
+import HTMLTableParser from "./HTMLTableParser.js";
 
 export default class ParserFactory {
   /**
-   * 
-   * @param {"csv" | "html"} fileType 
-   * @returns 
+   *
+   * @param {"csv" | "html"} fileType
+   * @returns
    */
   static createParser(fileType) {
     switch (fileType) {
